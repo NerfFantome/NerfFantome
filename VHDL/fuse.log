@@ -1,0 +1,21 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "P:/NerfFantome/MasterTest_isim_beh.exe" -prj "P:/NerfFantome/MasterTest_beh.prj" "work.MasterTest" 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "P:/NerfFantome/Master.vhd" into library work
+Parsing VHDL file "P:/NerfFantome/MasterTest.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 121072 KB
+Fuse CPU Usage: 342 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity Master [master_default]
+Compiling architecture behavior of entity mastertest
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable P:/NerfFantome/MasterTest_isim_beh.exe
+Fuse Memory Usage: 150880 KB
+Fuse CPU Usage: 358 ms

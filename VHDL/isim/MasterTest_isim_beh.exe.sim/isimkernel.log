@@ -1,0 +1,10 @@
+Command line:
+   MasterTest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53704
+
+Wed Mar 04 16:02:22 2015
+
+
+ Elaboration Time: 0.0625 sec

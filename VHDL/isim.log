@@ -1,0 +1,62 @@
+ISim log file
+Running: P:\NerfFantome\MasterTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb P:/NerfFantome/MasterTest_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1s
+Stopped at time : 24651380 ns : File "//buis.isim.intra/daniel.souza$/NerfFantome/MasterTest.vhd" Line 72
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1s
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 285989055 ns : File "//buis.isim.intra/daniel.souza$/NerfFantome/MasterTest.vhd" Line 74
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# step
+Simulator is doing circuit initialization process.
+Stopped at time : 0 fs : File "//buis.isim.intra/daniel.souza$/NerfFantome/MasterTest.vhd" Line 72
+# step
+Stopped at time : 0 fs : File "//buis.isim.intra/daniel.souza$/NerfFantome/MasterTest.vhd" Line 73
+# run 1s
+Finished circuit initialization process.
+Stopped at time : 161159500 ns : File "//buis.isim.intra/daniel.souza$/NerfFantome/MasterTest.vhd" Line 72
+# run 200ns
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 16207515 ns : File "//buis.isim.intra/daniel.souza$/NerfFantome/MasterTest.vhd" Line 74
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 200ns
+# restart
+# run 200ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+The simulator has terminated in an unexpected manner.  Please review the ISim log (isim.log) for details.
