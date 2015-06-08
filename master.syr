@@ -1,0 +1,1216 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: master.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "master.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "master"
+Output Format                      : NGC
+Target Device                      : xc3s1600e-5-fg320
+
+---- Source Options
+Top Module Name                    : master
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd" in Library work.
+Entity <cmd_bank_addr_switch> compiled.
+Entity <cmd_bank_addr_switch> (Architecture <impl>) compiled.
+Entity <wait_counter> compiled.
+Entity <wait_counter> (Architecture <impl>) compiled.
+Entity <sdram_dcm> compiled.
+Entity <sdram_dcm> (Architecture <impl>) compiled.
+Entity <oddr2_2> compiled.
+Entity <oddr2_2> (Architecture <impl>) compiled.
+Entity <oddr2_3> compiled.
+Entity <oddr2_3> (Architecture <impl>) compiled.
+Entity <oddr2_4> compiled.
+Entity <oddr2_4> (Architecture <impl>) compiled.
+Entity <oddr2_13> compiled.
+Entity <oddr2_13> (Architecture <impl>) compiled.
+Entity <oddr2_16> compiled.
+Entity <oddr2_16> (Architecture <impl>) compiled.
+Entity <inout_switch_2> compiled.
+Entity <inout_switch_2> (Architecture <impl>) compiled.
+Entity <inout_switch_16> compiled.
+Entity <inout_switch_16> (Architecture <impl>) compiled.
+Compiling vhdl file "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_init.vhd" in Library work.
+Entity <sdram_init> compiled.
+Entity <sdram_init> (Architecture <impl>) compiled.
+Compiling vhdl file "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_reader.vhd" in Library work.
+Entity <sdram_reader> compiled.
+Entity <sdram_reader> (Architecture <impl>) compiled.
+Compiling vhdl file "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_writer.vhd" in Library work.
+Entity <sdram_writer> compiled.
+Entity <sdram_writer> (Architecture <impl>) compiled.
+Compiling vhdl file "//buis.isim.intra/daniel.souza$/NerfFantome/sdram.vhd" in Library work.
+Entity <sdram_controller> compiled.
+Entity <sdram_controller> (Architecture <impl>) compiled.
+Compiling vhdl file "//buis.isim.intra/daniel.souza$/NerfFantome/Master.vhd" in Library work.
+Entity <master> compiled.
+Entity <master> (Architecture <impl>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <master> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <sdram_controller> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <sdram_dcm> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <sdram_init> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <cmd_bank_addr_switch> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_2> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_3> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_13> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <inout_switch_2> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <inout_switch_16> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <wait_counter> in library <work> (architecture <impl>) with generics.
+	BITS = 10
+	CLKS = 700
+
+Analyzing hierarchy for entity <wait_counter> in library <work> (architecture <impl>) with generics.
+	BITS = 4
+	CLKS = 11
+
+Analyzing hierarchy for entity <wait_counter> in library <work> (architecture <impl>) with generics.
+	BITS = 2
+	CLKS = 5
+
+Analyzing hierarchy for entity <wait_counter> in library <work> (architecture <impl>) with generics.
+	BITS = 2
+	CLKS = 4
+
+Analyzing hierarchy for entity <sdram_reader> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <sdram_writer> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <wait_counter> in library <work> (architecture <impl>) with generics.
+	BITS = 16
+	CLKS = 30000
+
+Analyzing hierarchy for entity <wait_counter> in library <work> (architecture <impl>) with generics.
+	BITS = 8
+	CLKS = 200
+
+Analyzing hierarchy for entity <oddr2_4> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_2> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_16> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_4> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_4> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_4> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_4> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_2> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_2> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_2> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_2> in library <work> (architecture <impl>).
+
+Analyzing hierarchy for entity <oddr2_2> in library <work> (architecture <impl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <master> in library <work> (Architecture <impl>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "CLKFX_DIVIDE =  2" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "DESKEW_ADJUST =  SOURCE_SYNCHRONOUS" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <TB_DCM> in unit <master>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <TB_DCM> in unit <master>.
+INFO:Xst:2679 - Register <address> in unit <master> has a constant value of 00000000000110000000000001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_i> in unit <master> has a constant value of 11110001 during circuit operation. The register is replaced by logic.
+Entity <master> analyzed. Unit <master> generated.
+
+Analyzing Entity <sdram_controller> in library <work> (Architecture <impl>).
+Entity <sdram_controller> analyzed. Unit <sdram_controller> generated.
+
+Analyzing Entity <sdram_dcm> in library <work> (Architecture <impl>).
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "CLKFX_DIVIDE =  2" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "CLKFX_MULTIPLY =  2" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "CLKIN_PERIOD =  10.0000000000000000" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "DESKEW_ADJUST =  SOURCE_SYNCHRONOUS" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <SDRAM_DCM> in unit <sdram_dcm>.
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_DRAM_CLKP> in unit <sdram_dcm>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_DRAM_CLKP> in unit <sdram_dcm>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <ODDR2_DRAM_CLKP> in unit <sdram_dcm>.
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_DRAM_CLKN> in unit <sdram_dcm>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_DRAM_CLKN> in unit <sdram_dcm>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <ODDR2_DRAM_CLKN> in unit <sdram_dcm>.
+Entity <sdram_dcm> analyzed. Unit <sdram_dcm> generated.
+
+Analyzing Entity <sdram_init> in library <work> (Architecture <impl>).
+Entity <sdram_init> analyzed. Unit <sdram_init> generated.
+
+Analyzing generic Entity <wait_counter.5> in library <work> (Architecture <impl>).
+	BITS = 16
+	CLKS = 30000
+Entity <wait_counter.5> analyzed. Unit <wait_counter.5> generated.
+
+Analyzing generic Entity <wait_counter.6> in library <work> (Architecture <impl>).
+	BITS = 8
+	CLKS = 200
+Entity <wait_counter.6> analyzed. Unit <wait_counter.6> generated.
+
+Analyzing Entity <cmd_bank_addr_switch> in library <work> (Architecture <impl>).
+Entity <cmd_bank_addr_switch> analyzed. Unit <cmd_bank_addr_switch> generated.
+
+Analyzing Entity <oddr2_2> in library <work> (Architecture <impl>).
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_0> in unit <oddr2_2>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_0> in unit <oddr2_2>.
+    Set user-defined property "SRTYPE =  ASYNC" for instance <ODDR2_0> in unit <oddr2_2>.
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_1> in unit <oddr2_2>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_1> in unit <oddr2_2>.
+    Set user-defined property "SRTYPE =  ASYNC" for instance <ODDR2_1> in unit <oddr2_2>.
+Entity <oddr2_2> analyzed. Unit <oddr2_2> generated.
+
+Analyzing Entity <oddr2_3> in library <work> (Architecture <impl>).
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_0> in unit <oddr2_3>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_0> in unit <oddr2_3>.
+    Set user-defined property "SRTYPE =  ASYNC" for instance <ODDR2_0> in unit <oddr2_3>.
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_1> in unit <oddr2_3>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_1> in unit <oddr2_3>.
+    Set user-defined property "SRTYPE =  ASYNC" for instance <ODDR2_1> in unit <oddr2_3>.
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_2> in unit <oddr2_3>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_2> in unit <oddr2_3>.
+    Set user-defined property "SRTYPE =  ASYNC" for instance <ODDR2_2> in unit <oddr2_3>.
+Entity <oddr2_3> analyzed. Unit <oddr2_3> generated.
+
+Analyzing Entity <oddr2_13> in library <work> (Architecture <impl>).
+    Set user-defined property "DDR_ALIGNMENT =  NONE" for instance <ODDR2_0> in unit <oddr2_13>.
+    Set user-defined property "INIT =  0" for instance <ODDR2_0> in unit <oddr2_13>.
+    Set user-defined property "SRTYPE =  ASYNC" for instance <ODDR2_0> in unit <oddr2_13>.
+Entity <oddr2_13> analyzed. Unit <oddr2_13> generated.
+
+Analyzing Entity <oddr2_4> in library <work> (Architecture <impl>).
+Entity <oddr2_4> analyzed. Unit <oddr2_4> generated.
+
+Analyzing Entity <inout_switch_2> in library <work> (Architecture <impl>).
+Entity <inout_switch_2> analyzed. Unit <inout_switch_2> generated.
+
+Analyzing Entity <inout_switch_16> in library <work> (Architecture <impl>).
+Entity <inout_switch_16> analyzed. Unit <inout_switch_16> generated.
+
+Analyzing generic Entity <wait_counter.1> in library <work> (Architecture <impl>).
+	BITS = 10
+	CLKS = 700
+Entity <wait_counter.1> analyzed. Unit <wait_counter.1> generated.
+
+Analyzing generic Entity <wait_counter.2> in library <work> (Architecture <impl>).
+	BITS = 4
+	CLKS = 11
+Entity <wait_counter.2> analyzed. Unit <wait_counter.2> generated.
+
+Analyzing generic Entity <wait_counter.3> in library <work> (Architecture <impl>).
+	BITS = 2
+	CLKS = 5
+Entity <wait_counter.3> analyzed. Unit <wait_counter.3> generated.
+
+Analyzing generic Entity <wait_counter.4> in library <work> (Architecture <impl>).
+	BITS = 2
+	CLKS = 4
+Entity <wait_counter.4> analyzed. Unit <wait_counter.4> generated.
+
+Analyzing Entity <sdram_reader> in library <work> (Architecture <impl>).
+Entity <sdram_reader> analyzed. Unit <sdram_reader> generated.
+
+Analyzing Entity <sdram_writer> in library <work> (Architecture <impl>).
+INFO:Xst:2679 - Register <dqs_fsm_f> in unit <sdram_writer> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <dq_rising> in unit <sdram_writer> has a constant value of 0000000000000000 during circuit operation. The register is replaced by logic.
+Entity <sdram_writer> analyzed. Unit <sdram_writer> generated.
+
+Analyzing Entity <oddr2_16> in library <work> (Architecture <impl>).
+Entity <oddr2_16> analyzed. Unit <oddr2_16> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <cmd_bank_addr_switch>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+Unit <cmd_bank_addr_switch> synthesized.
+
+
+Synthesizing Unit <inout_switch_2>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 2-bit tristate buffer for signal <ioport>.
+    Summary:
+	inferred   2 Tristate(s).
+Unit <inout_switch_2> synthesized.
+
+
+Synthesizing Unit <inout_switch_16>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 16-bit tristate buffer for signal <data_o>.
+    Found 16-bit tristate buffer for signal <ioport>.
+    Summary:
+	inferred  32 Tristate(s).
+Unit <inout_switch_16> synthesized.
+
+
+Synthesizing Unit <wait_counter_1>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 1-bit register for signal <done>.
+    Found 10-bit down counter for signal <reg>.
+    Found 10-bit comparator greater for signal <reg$cmp_gt0000> created at line 92.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <wait_counter_1> synthesized.
+
+
+Synthesizing Unit <wait_counter_2>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 1-bit register for signal <done>.
+    Found 4-bit down counter for signal <reg>.
+    Found 8-bit comparator greater for signal <reg$cmp_gt0000> created at line 92.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <wait_counter_2> synthesized.
+
+
+Synthesizing Unit <wait_counter_3>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 1-bit register for signal <done>.
+    Found 2-bit down counter for signal <reg>.
+    Found 8-bit comparator greater for signal <reg$cmp_gt0000> created at line 92.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <wait_counter_3> synthesized.
+
+
+Synthesizing Unit <wait_counter_4>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 1-bit register for signal <done>.
+    Found 2-bit down counter for signal <reg>.
+    Found 8-bit comparator greater for signal <reg$cmp_gt0000> created at line 92.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <wait_counter_4> synthesized.
+
+
+Synthesizing Unit <sdram_reader>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_reader.vhd".
+    Found finite state machine <FSM_0> for signal <fsm0_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk270                    (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | fsm0_start                                     |
+    | Power Up State     | fsm0_start                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <reg0>.
+    Found 8-bit register for signal <reg1>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  16 D-type flip-flop(s).
+Unit <sdram_reader> synthesized.
+
+
+Synthesizing Unit <wait_counter_5>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 1-bit register for signal <done>.
+    Found 16-bit down counter for signal <reg>.
+    Found 16-bit comparator greater for signal <reg$cmp_gt0000> created at line 92.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <wait_counter_5> synthesized.
+
+
+Synthesizing Unit <wait_counter_6>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+    Found 1-bit register for signal <done>.
+    Found 8-bit down counter for signal <reg>.
+    Found 8-bit comparator greater for signal <reg$cmp_gt0000> created at line 92.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <wait_counter_6> synthesized.
+
+
+Synthesizing Unit <sdram_dcm>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+Unit <sdram_dcm> synthesized.
+
+
+Synthesizing Unit <sdram_init>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_init.vhd".
+    Found finite state machine <FSM_1> for signal <init_state>.
+    -----------------------------------------------------------------------
+    | States             | 19                                             |
+    | Transitions        | 23                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 15                                             |
+    | Clock              | clk_000                   (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | state_start                                    |
+    | Power Up State     | state_start                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit register for signal <cmd>.
+    Found 1-bit register for signal <clke>.
+    Found 1-bit register for signal <done>.
+    Found 1-bit register for signal <a058>.
+    Found 1-bit register for signal <a10>.
+    Found 1-bit register for signal <bk0>.
+    Found 1-bit register for signal <wait200us_rst>.
+    Found 1-bit register for signal <wait_200clks_rst>.
+    Found 1-bit register for signal <wait_ar_rst>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  11 D-type flip-flop(s).
+Unit <sdram_init> synthesized.
+
+
+Synthesizing Unit <oddr2_2>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+Unit <oddr2_2> synthesized.
+
+
+Synthesizing Unit <oddr2_3>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+Unit <oddr2_3> synthesized.
+
+
+Synthesizing Unit <oddr2_4>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+Unit <oddr2_4> synthesized.
+
+
+Synthesizing Unit <oddr2_13>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+Unit <oddr2_13> synthesized.
+
+
+Synthesizing Unit <oddr2_16>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_support.vhd".
+Unit <oddr2_16> synthesized.
+
+
+Synthesizing Unit <sdram_writer>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram_writer.vhd".
+    Found finite state machine <FSM_2> for signal <writer_dqs_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk180                    (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | state_writer_dqs_0                             |
+    | Power Up State     | state_writer_dqs_0                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <writer_dm_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | state_writer_dm_0                              |
+    | Power Up State     | state_writer_dm_0                              |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit register for signal <dm_falling>.
+    Found 2-bit register for signal <dm_rising>.
+    Found 16-bit register for signal <dq_falling>.
+    Found 1-bit register for signal <dqs_fsm_r>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred  21 D-type flip-flop(s).
+Unit <sdram_writer> synthesized.
+
+
+Synthesizing Unit <sdram_controller>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/sdram.vhd".
+    Register <dqs_dir> equivalent to <dq_dir> has been removed
+    Found finite state machine <FSM_4> for signal <cmd_state>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 16                                             |
+    | Clock              | clk_000                   (rising_edge)        |
+    | Clock enable       | dcm_locked                (positive)           |
+    | Power Up State     | state_start                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <busy_n>.
+    Found 1-bit register for signal <op_ack>.
+    Found 26-bit register for signal <addr_save>.
+    Found 1-bit register for signal <cap_en>.
+    Found 8-bit register for signal <datai_save>.
+    Found 1-bit register for signal <dq_dir>.
+    Found 1-bit register for signal <init_reset>.
+    Found 13-bit register for signal <main_addr>.
+    Found 2-bit register for signal <main_bank>.
+    Found 3-bit register for signal <main_cmd>.
+    Found 1-bit register for signal <main_sel>.
+    Found 1-bit register for signal <need_ar_rst>.
+    Found 2-bit register for signal <op_save>.
+    Found 1-bit register for signal <read_wait_rst>.
+    Found 1-bit register for signal <reader_rst>.
+    Found 1-bit register for signal <wait_ar_rst>.
+    Found 1-bit register for signal <write_reco_rst>.
+    Found 1-bit register for signal <writer_rst>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  66 D-type flip-flop(s).
+Unit <sdram_controller> synthesized.
+
+
+Synthesizing Unit <master>.
+    Related source file is "//buis.isim.intra/daniel.souza$/NerfFantome/Master.vhd".
+WARNING:Xst:1306 - Output <analog_msb> is never assigned.
+WARNING:Xst:1780 - Signal <divOutput> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <deliveryFinished> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <deliveryAllowed> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dcm_locked> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dataSent> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dataRequired> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_5> for signal <writeState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_bufd                  (rising_edge)        |
+    | Clock enable       | clke                      (positive)           |
+    | Power Up State     | writeinit                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_6> for signal <readState>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 22                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk_bufd                  (rising_edge)        |
+    | Clock enable       | clke                      (positive)           |
+    | Power Up State     | waitforwrite                                   |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_7> for signal <dacCount>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_bufd                  (rising_edge)        |
+    | Clock enable       | dacCount$not0000          (positive)           |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_8> for signal <DACFlowState>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 16                                             |
+    | Inputs             | 0                                              |
+    | Outputs            | 16                                             |
+    | Clock              | clk_bufd                  (rising_edge)        |
+    | Clock enable       | DACFlowState$not0000      (positive)           |
+    | Power Up State     | dacawritetrans                                 |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <led>.
+    Found 1-bit register for signal <analog_ldac>.
+    Found 1-bit register for signal <analog_reset_strobe>.
+    Found 1-bit register for signal <analog_chip_select>.
+    Found 2-bit register for signal <analog_address>.
+    Found 1-bit register for signal <analog_read_write>.
+    Found 12-bit register for signal <$mux0000>.
+    Found 1-bit register for signal <clk1khz>.
+    Found 10-bit up counter for signal <counter>.
+    Found 1-bit register for signal <data0Ready>.
+    Found 1-bit register for signal <data1Ready>.
+    Found 1-bit register for signal <dataNeeded>.
+    Found 2-bit register for signal <op>.
+    Found 4-bit register for signal <output4bits0>.
+    Found 4-bit register for signal <output4bits1>.
+    Found 8-bit register for signal <output8bits>.
+    Found 1-bit register for signal <readRequired>.
+    Summary:
+	inferred   4 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  49 D-type flip-flop(s).
+Unit <master> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 8
+ 10-bit down counter                                   : 1
+ 10-bit up counter                                     : 1
+ 16-bit down counter                                   : 1
+ 2-bit down counter                                    : 2
+ 4-bit down counter                                    : 2
+ 8-bit down counter                                    : 1
+# Registers                                            : 55
+ 1-bit register                                        : 36
+ 12-bit register                                       : 1
+ 13-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 6
+ 26-bit register                                       : 1
+ 3-bit register                                        : 2
+ 4-bit register                                        : 2
+ 8-bit register                                        : 5
+# Comparators                                          : 7
+ 10-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 5
+# Tristates                                            : 3
+ 16-bit tristate buffer                                : 2
+ 2-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_8> for best encoding.
+Optimizing FSM <DACFlowState/FSM> on signal <DACFlowState[1:16]> with one-hot encoding.
+------------------------------------
+ State          | Encoding
+------------------------------------
+ dacawritetrans | 0000000000000001
+ dacbwritetrans | 0000000000001000
+ daccwritetrans | 0000000001000000
+ dacdwritetrans | 0000001000000000
+ dacawritehold  | 0000000000000010
+ dacbwritehold  | 0000000000010000
+ daccwritehold  | 0000000010000000
+ dacdwritehold  | 0000010000000000
+ dacareadhold   | 0000000000000100
+ dacbreadhold   | 0000000000100000
+ daccreadhold   | 0000000100000000
+ dacdreadhold   | 0000100000000000
+ dacholdall     | 0010000000000000
+ dacupdateall   | 0001000000000000
+ dacresetall    | 0100000000000000
+ dacflowover    | 1000000000000000
+------------------------------------
+Analyzing FSM <FSM_7> for best encoding.
+Optimizing FSM <dacCount/FSM> on signal <dacCount[1:3]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 001
+ 01    | 010
+ 10    | 100
+-------------------
+Analyzing FSM <FSM_6> for best encoding.
+Optimizing FSM <readState/FSM> on signal <readState[1:6]> with one-hot encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ waitforwrite | 000001
+ readinit     | 000010
+ readattempt  | 000100
+ waitread     | 001000
+ senddata     | 010000
+ readdone     | 100000
+--------------------------
+Analyzing FSM <FSM_5> for best encoding.
+Optimizing FSM <writeState/FSM> on signal <writeState[1:2]> with gray encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ writeinit    | 00
+ writeattempt | 01
+ waitwrite    | 11
+ writedone    | 10
+--------------------------
+Analyzing FSM <FSM_4> for best encoding.
+Optimizing FSM <SDRAM/cmd_state/FSM> on signal <cmd_state[1:16]> with one-hot encoding.
+--------------------------------------------------
+ State                        | Encoding
+--------------------------------------------------
+ state_start                  | 0000000000000001
+ state_init                   | 0000000000000010
+ state_wait_init              | 0000000000000100
+ state_idle                   | 0000000000001000
+ state_idle_auto_refresh      | 0000000000010000
+ state_idle_check_op_pending  | 0000001000000000
+ state_idle_wait_ar_ctr       | 0000000010000000
+ state_idle_wait_auto_refresh | 0000000100000000
+ state_write_row_open         | 0000000001000000
+ state_write_wait_row_open    | 0000010000000000
+ state_write_issue_cmd        | 0000100000000000
+ state_write_wait_recover     | 0001000000000000
+ state_read_row_open          | 0000000000100000
+ state_read_wait_row_open     | 0010000000000000
+ state_read_issue_cmd         | 0100000000000000
+ state_read_wait_capture      | 1000000000000000
+--------------------------------------------------
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <SDRAM/WRITER/writer_dm_state/FSM> on signal <writer_dm_state[1:3]> with one-hot encoding.
+----------------------------------
+ State                | Encoding
+----------------------------------
+ state_writer_dm_0    | 001
+ state_writer_dm_1    | 010
+ state_writer_dm_done | 100
+----------------------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <SDRAM/WRITER/writer_dqs_state/FSM> on signal <writer_dqs_state[1:3]> with one-hot encoding.
+-----------------------------------
+ State                 | Encoding
+-----------------------------------
+ state_writer_dqs_0    | 001
+ state_writer_dqs_1    | 010
+ state_writer_dqs_done | 100
+-----------------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <SDRAM/DRAM_INIT/init_state/FSM> on signal <init_state[1:19]> with one-hot encoding.
+--------------------------------------------------
+ State                     | Encoding
+--------------------------------------------------
+ state_start               | 0000000000000000001
+ state_wait200us           | 0000000000000000010
+ state_clke                | 0000000000000000100
+ state_precharge_all0      | 0000000000000001000
+ state_wait_precharge_all0 | 0000000000000010000
+ state_load_mre            | 0000000000000100000
+ state_wait_mre            | 0000000000001000000
+ state_load_mrn            | 0000000000010000000
+ state_wait_mrn            | 0000000000100000000
+ state_precharge_all1      | 0000000001000000000
+ state_wait_precharge_all1 | 0000000010000000000
+ state_auto_refresh0       | 0000000100000000000
+ state_wait_ar_ctr0        | 0000001000000000000
+ state_wait_auto_refresh0  | 0000010000000000000
+ state_auto_refresh1       | 0000100000000000000
+ state_wait_ar_ctr1        | 0001000000000000000
+ state_wait_auto_refresh1  | 0010000000000000000
+ state_wait_200_clocks     | 0100000000000000000
+ state_done                | 1000000000000000000
+--------------------------------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <SDRAM/READER/fsm0_state/FSM> on signal <fsm0_state[1:4]> with one-hot encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ fsm0_start   | 0001
+ fsm0_wait0   | 0010
+ fsm0_capture | 0100
+ fsm0_end     | 1000
+--------------------------
+INFO:Xst:2261 - The FF/Latch <datai_save_0> in Unit <SDRAM> is equivalent to the following 7 FFs/Latches, which will be removed : <datai_save_4> <datai_save_5> <datai_save_6> <datai_save_7> <addr_save_0> <addr_save_13> <addr_save_14> 
+INFO:Xst:2261 - The FF/Latch <datai_save_1> in Unit <SDRAM> is equivalent to the following 25 FFs/Latches, which will be removed : <datai_save_2> <datai_save_3> <addr_save_1> <addr_save_2> <addr_save_3> <addr_save_4> <addr_save_5> <addr_save_6> <addr_save_7> <addr_save_8> <addr_save_9> <addr_save_10> <addr_save_11> <addr_save_12> <addr_save_15> <addr_save_16> <addr_save_17> <addr_save_18> <addr_save_19> <addr_save_20> <addr_save_21> <addr_save_22> <addr_save_23> <addr_save_24> <addr_save_25> 
+WARNING:Xst:1426 - The value init of the FF/Latch FFd16 hinder the constant cleaning in the block FSM.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch FFd16 hinder the constant cleaning in the block FSM.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <datai_save_1> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_0> (without init value) has a constant value of 1 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_bank_1> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_bank_0> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_12> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_11> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_9> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_8> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_7> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_6> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_5> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_4> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_1> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_0> (without init value) has a constant value of 0 in block <SDRAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_11> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_10> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_9> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_7> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_6> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_5> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_4> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_3> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_2> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_1> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <dq_falling_0> has a constant value of 0 in block <WRITER>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <reg0_0> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2677 - Node <reg0_1> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2677 - Node <reg0_2> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2677 - Node <reg0_3> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2677 - Node <reg0_4> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2677 - Node <reg0_5> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2677 - Node <reg0_6> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2677 - Node <reg0_7> of sequential type is unconnected in block <READER>.
+WARNING:Xst:2404 -  FFs/Latches <addr_save<25:15>> (without init value) have a constant value of 0 in block <sdram_controller>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 9
+# Counters                                             : 7
+ 10-bit down counter                                   : 1
+ 16-bit down counter                                   : 1
+ 2-bit down counter                                    : 2
+ 4-bit down counter                                    : 2
+ 8-bit down counter                                    : 1
+# Registers                                            : 158
+ Flip-Flops                                            : 158
+# Comparators                                          : 7
+ 10-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 1
+ 8-bit comparator greater                              : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd16 hinder the constant cleaning in the block FSM_8-parent.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd16 hinder the constant cleaning in the block FSM_4-parent.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <datai_save_6> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_7> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_0> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_1> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_2> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_3> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_4> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_5> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_6> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_7> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_8> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_9> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_10> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_11> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_12> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_13> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <addr_save_14> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_0> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_1> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_4> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_5> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_6> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_7> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_8> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_9> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_11> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_addr_12> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_bank_0> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <main_bank_1> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_0> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_1> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_2> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_3> (without init value) has a constant value of 0 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_4> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <datai_save_5> (without init value) has a constant value of 1 in block <sdram_controller>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <dm_rising_0> in Unit <sdram_writer> is equivalent to the following FF/Latch, which will be removed : <dm_rising_1> 
+WARNING:Xst:1293 - FF/Latch <dq_falling_0> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_1> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_2> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_3> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_4> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_5> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_6> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_7> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_9> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_10> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dq_falling_11> has a constant value of 0 in block <sdram_writer>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <init_state_FSM_FFd13> in Unit <sdram_init> is equivalent to the following FF/Latch, which will be removed : <bk0> 
+WARNING:Xst:2042 - Unit master: 16 internal tristates are replaced by logic (pull-up yes): SDRAM/dq_in<0>, SDRAM/dq_in<10>, SDRAM/dq_in<11>, SDRAM/dq_in<12>, SDRAM/dq_in<13>, SDRAM/dq_in<14>, SDRAM/dq_in<15>, SDRAM/dq_in<1>, SDRAM/dq_in<2>, SDRAM/dq_in<3>, SDRAM/dq_in<4>, SDRAM/dq_in<5>, SDRAM/dq_in<6>, SDRAM/dq_in<7>, SDRAM/dq_in<8>, SDRAM/dq_in<9>.
+
+Optimizing unit <master> ...
+
+Optimizing unit <sdram_reader> ...
+
+Optimizing unit <sdram_init> ...
+
+Optimizing unit <sdram_writer> ...
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_7> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_6> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_5> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_4> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_3> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_2> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_1> of sequential type is unconnected in block <master>.
+WARNING:Xst:2677 - Node <SDRAM/READER/reg0_0> of sequential type is unconnected in block <master>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block master, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 218
+ Flip-Flops                                            : 218
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : master.ngr
+Top Level Output File Name         : master
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 80
+
+Cell Usage :
+# BELS                             : 344
+#      GND                         : 1
+#      INV                         : 41
+#      LUT1                        : 3
+#      LUT2                        : 41
+#      LUT2_D                      : 1
+#      LUT3                        : 61
+#      LUT3_D                      : 2
+#      LUT3_L                      : 3
+#      LUT4                        : 97
+#      LUT4_D                      : 4
+#      LUT4_L                      : 3
+#      MUXCY                       : 35
+#      MUXF5                       : 17
+#      VCC                         : 1
+#      XORCY                       : 34
+# FlipFlops/Latches                : 258
+#      FDC                         : 38
+#      FDCE                        : 25
+#      FDE                         : 119
+#      FDP                         : 12
+#      FDPE                        : 24
+#      ODDR2                       : 40
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 79
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      IOBUF                       : 8
+#      OBUF                        : 58
+#      OBUFT                       : 10
+# DCMs                             : 2
+#      DCM_SP                      : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1600efg320-5 
+
+ Number of Slices:                      163  out of  14752     1%  
+ Number of Slice Flip Flops:            258  out of  29504     0%  
+ Number of 4 input LUTs:                256  out of  29504     0%  
+ Number of IOs:                          80
+ Number of bonded IOBs:                  79  out of    250    31%  
+ Number of GCLKs:                         4  out of     24    16%  
+ Number of DCMs:                          2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                      | Load  |
+-----------------------------------+--------------------------------------------+-------+
+clk                                | IBUFG+BUFG                                 | 75    |
+clk                                | TB_DCM:CLK2X+SDRAM/DRAM_DCM/SDRAM_DCM:CLK0 | 140   |
+clk                                | TB_DCM:CLK2X+SDRAM/DRAM_DCM/SDRAM_DCM:CLK90| 83    |
+-----------------------------------+--------------------------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------+--------------------------------------------+-------+
+Control Signal                                                      | Buffer(FF name)                            | Load  |
+--------------------------------------------------------------------+--------------------------------------------+-------+
+SDRAM/init_reset(SDRAM/init_reset:Q)                                | NONE(SDRAM/DRAM_INIT/a058)                 | 29    |
+SDRAM/DRAM_INIT/wait200us_rst(SDRAM/DRAM_INIT/wait200us_rst:Q)      | NONE(SDRAM/DRAM_INIT/WAIT200US_CTR/done)   | 17    |
+SDRAM/writer_rst(SDRAM/writer_rst:Q)                                | NONE(SDRAM/WRITER/dm_falling_0)            | 14    |
+SDRAM/need_ar_rst(SDRAM/need_ar_rst:Q)                              | NONE(SDRAM/AR_NEEDED_CTR/done)             | 11    |
+SDRAM/DRAM_INIT/wait_200clks_rst(SDRAM/DRAM_INIT/wait_200clks_rst:Q)| NONE(SDRAM/DRAM_INIT/WAIT_200CLKS_CTR/done)| 9     |
+SDRAM/DRAM_INIT/wait_ar_rst(SDRAM/DRAM_INIT/wait_ar_rst:Q)          | NONE(SDRAM/DRAM_INIT/WAIT_AR_CTR/done)     | 5     |
+SDRAM/wait_ar_rst(SDRAM/wait_ar_rst:Q)                              | NONE(SDRAM/WAIT_AR_CTR/done)               | 5     |
+SDRAM/read_wait_rst(SDRAM/read_wait_rst:Q)                          | NONE(SDRAM/READ_DONE_CTR/done)             | 3     |
+SDRAM/reader_rst(SDRAM/reader_rst:Q)                                | NONE(SDRAM/READER/fsm0_state_FSM_FFd2)     | 3     |
+SDRAM/write_reco_rst(SDRAM/write_reco_rst:Q)                        | NONE(SDRAM/WRITE_RECOVER_CTR/done)         | 3     |
+--------------------------------------------------------------------+--------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 14.216ns (Maximum Frequency: 70.345MHz)
+   Minimum input arrival time before clock: 4.942ns
+   Maximum output required time after clock: 5.952ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 14.216ns (frequency: 70.345MHz)
+  Total number of paths / destination ports: 1717 / 354
+-------------------------------------------------------------------------
+Delay:               1.777ns (Levels of Logic = 1)
+  Source:            SDRAM/READER/reg1_0 (FF)
+  Destination:       output8bits_0 (FF)
+  Source Clock:      clk falling 2.0X +90
+  Destination Clock: clk rising
+
+  Data Path: SDRAM/READER/reg1_0 to output8bits_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.514   0.383  SDRAM/READER/reg1_0 (SDRAM/READER/reg1_0)
+     LUT4:I3->O            1   0.612   0.000  output8bits_mux0000<0>1 (output8bits_mux0000<0>)
+     FDE:D                     0.268          output8bits_0
+    ----------------------------------------
+    Total                      1.777ns (1.394ns logic, 0.383ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 86 / 85
+-------------------------------------------------------------------------
+Offset:              4.942ns (Levels of Logic = 3)
+  Source:            clke (PAD)
+  Destination:       data0Ready (FF)
+  Destination Clock: clk rising
+
+  Data Path: clke to data0Ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.106   0.923  clke_IBUF (clke_IBUF)
+     LUT4:I2->O            9   0.612   0.849  output4bits0_not00011 (output4bits0_not0001)
+     LUT4:I0->O            1   0.612   0.357  data0Ready_not0001 (data0Ready_not0001)
+     FDE:CE                    0.483          data0Ready
+    ----------------------------------------
+    Total                      4.942ns (2.813ns logic, 2.129ns route)
+                                       (56.9% logic, 43.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 45 / 45
+-------------------------------------------------------------------------
+Offset:              5.952ns (Levels of Logic = 2)
+  Source:            SDRAM/dq_dir (FF)
+  Destination:       dram_dqs<1> (PAD)
+  Source Clock:      clk rising 2.0X
+
+  Data Path: SDRAM/dq_dir to dram_dqs<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.514   0.750  SDRAM/dq_dir (SDRAM/dq_dir)
+     INV:I->O             18   0.612   0.908  SDRAM/DQS_SWITCH/dir_inv1_INV_0 (SDRAM/DQS_SWITCH/dir_inv)
+     OBUFT:T->O                3.169          dram_dqs_1_OBUFT (dram_dqs<1>)
+    ----------------------------------------
+    Total                      5.952ns (4.295ns logic, 1.658ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.14 secs
+ 
+--> 
+
+Total memory usage is 303040 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  100 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+
