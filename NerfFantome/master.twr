@@ -1,0 +1,209 @@
+--------------------------------------------------------------------------------
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml master.twx master.ncd -o master.twr master.pcf
+
+Design file:              master.ncd
+Physical constraint file: master.pcf
+Device,package,speed:     xc3s1600e,fg320,-5 (PRODUCTION 1.27 2012-12-04)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+clke        |    4.246(R)|    0.961(R)|clk_bufd          |   0.000|
+dram_dq<8>  |   -1.210(F)|    2.772(F)|SDRAM/clk_090     |   0.000|
+dram_dq<9>  |   -0.934(F)|    2.552(F)|SDRAM/clk_090     |   0.000|
+dram_dq<10> |   -1.119(F)|    2.700(F)|SDRAM/clk_090     |   0.000|
+dram_dq<11> |   -1.436(F)|    2.954(F)|SDRAM/clk_090     |   0.000|
+dram_dq<12> |    0.033(F)|    1.804(F)|SDRAM/clk_090     |   0.000|
+dram_dq<13> |    0.367(F)|    1.537(F)|SDRAM/clk_090     |   0.000|
+dram_dq<14> |   -1.521(F)|    3.021(F)|SDRAM/clk_090     |   0.000|
+dram_dq<15> |   -1.023(F)|    2.623(F)|SDRAM/clk_090     |   0.000|
+rst         |    2.327(R)|    2.705(R)|SDRAM/clk_000     |   0.000|
+            |    2.327(F)|    2.705(F)|SDRAM/clk_000     |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+-------------------+------------+------------------+--------+
+                   | clk (edge) |                  | Clock  |
+Destination        |   to PAD   |Internal Clock(s) | Phase  |
+-------------------+------------+------------------+--------+
+analog_address<0>  |    7.313(R)|clk_bufd          |   0.000|
+analog_address<1>  |    7.089(R)|clk_bufd          |   0.000|
+analog_chip_select |    6.820(R)|clk_bufd          |   0.000|
+analog_data<0>     |    7.228(R)|clk_bufd          |   0.000|
+analog_data<1>     |    7.174(R)|clk_bufd          |   0.000|
+analog_data<2>     |    7.899(R)|clk_bufd          |   0.000|
+analog_data<3>     |    6.709(R)|clk_bufd          |   0.000|
+analog_data<4>     |    6.758(R)|clk_bufd          |   0.000|
+analog_data<5>     |    6.759(R)|clk_bufd          |   0.000|
+analog_data<6>     |    7.179(R)|clk_bufd          |   0.000|
+analog_data<7>     |    7.234(R)|clk_bufd          |   0.000|
+analog_data<8>     |    6.700(R)|clk_bufd          |   0.000|
+analog_data<9>     |    7.196(R)|clk_bufd          |   0.000|
+analog_data<10>    |    7.185(R)|clk_bufd          |   0.000|
+analog_data<11>    |    7.134(R)|clk_bufd          |   0.000|
+analog_ldac        |    8.838(R)|clk_bufd          |   0.000|
+analog_read_write  |    7.265(R)|clk_bufd          |   0.000|
+analog_reset_strobe|    7.081(R)|clk_bufd          |   0.000|
+dram_addr<0>       |    7.519(R)|SDRAM/clk_090     |   0.000|
+                   |    7.519(F)|SDRAM/clk_090     |   0.000|
+dram_addr<1>       |    7.564(R)|SDRAM/clk_090     |   0.000|
+                   |    7.564(F)|SDRAM/clk_090     |   0.000|
+dram_addr<2>       |    7.551(R)|SDRAM/clk_090     |   0.000|
+                   |    7.551(F)|SDRAM/clk_090     |   0.000|
+dram_addr<3>       |    7.558(R)|SDRAM/clk_090     |   0.000|
+                   |    7.558(F)|SDRAM/clk_090     |   0.000|
+dram_addr<4>       |    7.564(R)|SDRAM/clk_090     |   0.000|
+                   |    7.564(F)|SDRAM/clk_090     |   0.000|
+dram_addr<5>       |    7.500(R)|SDRAM/clk_090     |   0.000|
+                   |    7.500(F)|SDRAM/clk_090     |   0.000|
+dram_addr<6>       |    7.551(R)|SDRAM/clk_090     |   0.000|
+                   |    7.551(F)|SDRAM/clk_090     |   0.000|
+dram_addr<7>       |    7.559(R)|SDRAM/clk_090     |   0.000|
+                   |    7.559(F)|SDRAM/clk_090     |   0.000|
+dram_addr<8>       |    7.519(R)|SDRAM/clk_090     |   0.000|
+                   |    7.519(F)|SDRAM/clk_090     |   0.000|
+dram_addr<9>       |    7.559(R)|SDRAM/clk_090     |   0.000|
+                   |    7.559(F)|SDRAM/clk_090     |   0.000|
+dram_addr<10>      |    7.482(R)|SDRAM/clk_090     |   0.000|
+                   |    7.482(F)|SDRAM/clk_090     |   0.000|
+dram_addr<11>      |    7.565(R)|SDRAM/clk_090     |   0.000|
+                   |    7.565(F)|SDRAM/clk_090     |   0.000|
+dram_addr<12>      |    7.571(R)|SDRAM/clk_090     |   0.000|
+                   |    7.571(F)|SDRAM/clk_090     |   0.000|
+dram_bank<0>       |    7.557(R)|SDRAM/clk_090     |   0.000|
+                   |    7.557(F)|SDRAM/clk_090     |   0.000|
+dram_bank<1>       |    7.531(R)|SDRAM/clk_090     |   0.000|
+                   |    7.531(F)|SDRAM/clk_090     |   0.000|
+dram_clke          |   10.060(R)|SDRAM/clk_000     |   0.000|
+dram_clkn          |    7.584(R)|SDRAM/clk_000     |   0.000|
+                   |    7.584(F)|SDRAM/clk_000     |   0.000|
+dram_clkp          |    7.583(R)|SDRAM/clk_000     |   0.000|
+                   |    7.583(F)|SDRAM/clk_000     |   0.000|
+dram_cmd<0>        |    7.482(R)|SDRAM/clk_090     |   0.000|
+                   |    7.482(F)|SDRAM/clk_090     |   0.000|
+dram_cmd<1>        |    7.491(R)|SDRAM/clk_090     |   0.000|
+                   |    7.491(F)|SDRAM/clk_090     |   0.000|
+dram_cmd<2>        |    7.500(R)|SDRAM/clk_090     |   0.000|
+                   |    7.500(F)|SDRAM/clk_090     |   0.000|
+dram_dm<0>         |    7.436(R)|SDRAM/clk_090     |   0.000|
+                   |    7.436(F)|SDRAM/clk_090     |   0.000|
+dram_dm<1>         |    7.436(R)|SDRAM/clk_090     |   0.000|
+                   |    7.436(F)|SDRAM/clk_090     |   0.000|
+dram_dq<0>         |    7.581(R)|SDRAM/clk_090     |   0.000|
+                   |    7.581(F)|SDRAM/clk_090     |   0.000|
+                   |   10.960(R)|SDRAM/clk_000     |   0.000|
+dram_dq<1>         |   10.743(R)|SDRAM/clk_000     |   0.000|
+                   |    7.577(R)|SDRAM/clk_090     |   0.000|
+                   |    7.577(F)|SDRAM/clk_090     |   0.000|
+dram_dq<2>         |    7.576(R)|SDRAM/clk_090     |   0.000|
+                   |    7.576(F)|SDRAM/clk_090     |   0.000|
+                   |   11.175(R)|SDRAM/clk_000     |   0.000|
+dram_dq<3>         |   11.181(R)|SDRAM/clk_000     |   0.000|
+                   |    7.576(R)|SDRAM/clk_090     |   0.000|
+                   |    7.576(F)|SDRAM/clk_090     |   0.000|
+dram_dq<4>         |    7.566(R)|SDRAM/clk_090     |   0.000|
+                   |    7.566(F)|SDRAM/clk_090     |   0.000|
+                   |   10.656(R)|SDRAM/clk_000     |   0.000|
+dram_dq<5>         |   10.740(R)|SDRAM/clk_000     |   0.000|
+                   |    7.581(R)|SDRAM/clk_090     |   0.000|
+                   |    7.581(F)|SDRAM/clk_090     |   0.000|
+dram_dq<6>         |    7.449(R)|SDRAM/clk_090     |   0.000|
+                   |    7.449(F)|SDRAM/clk_090     |   0.000|
+                   |   10.050(R)|SDRAM/clk_000     |   0.000|
+dram_dq<7>         |    7.449(R)|SDRAM/clk_090     |   0.000|
+                   |    7.449(F)|SDRAM/clk_090     |   0.000|
+                   |   10.477(R)|SDRAM/clk_000     |   0.000|
+dram_dq<8>         |    9.831(R)|SDRAM/clk_000     |   0.000|
+                   |    7.443(R)|SDRAM/clk_090     |   0.000|
+                   |    7.443(F)|SDRAM/clk_090     |   0.000|
+dram_dq<9>         |   10.969(R)|SDRAM/clk_000     |   0.000|
+                   |    7.447(R)|SDRAM/clk_090     |   0.000|
+                   |    7.447(F)|SDRAM/clk_090     |   0.000|
+dram_dq<10>        |    7.447(R)|SDRAM/clk_090     |   0.000|
+                   |    7.447(F)|SDRAM/clk_090     |   0.000|
+                   |    9.832(R)|SDRAM/clk_000     |   0.000|
+dram_dq<11>        |   10.529(R)|SDRAM/clk_000     |   0.000|
+                   |    7.434(R)|SDRAM/clk_090     |   0.000|
+                   |    7.434(F)|SDRAM/clk_090     |   0.000|
+dram_dq<12>        |    7.437(R)|SDRAM/clk_090     |   0.000|
+                   |    7.437(F)|SDRAM/clk_090     |   0.000|
+                   |   10.052(R)|SDRAM/clk_000     |   0.000|
+dram_dq<13>        |    7.437(R)|SDRAM/clk_090     |   0.000|
+                   |    7.437(F)|SDRAM/clk_090     |   0.000|
+                   |   10.532(R)|SDRAM/clk_000     |   0.000|
+dram_dq<14>        |    7.434(R)|SDRAM/clk_090     |   0.000|
+                   |    7.434(F)|SDRAM/clk_090     |   0.000|
+                   |   10.268(R)|SDRAM/clk_000     |   0.000|
+dram_dq<15>        |   10.753(R)|SDRAM/clk_000     |   0.000|
+                   |    7.443(R)|SDRAM/clk_090     |   0.000|
+                   |    7.443(F)|SDRAM/clk_090     |   0.000|
+dram_dqs<0>        |   10.411(R)|SDRAM/clk_000     |   0.000|
+                   |    7.568(F)|SDRAM/clk_000     |   0.000|
+dram_dqs<1>        |   10.631(R)|SDRAM/clk_000     |   0.000|
+                   |    7.568(F)|SDRAM/clk_000     |   0.000|
+led<0>             |    6.636(R)|clk_bufd          |   0.000|
+led<1>             |    6.639(R)|clk_bufd          |   0.000|
+led<2>             |    7.172(R)|clk_bufd          |   0.000|
+led<3>             |    7.105(R)|clk_bufd          |   0.000|
+led<4>             |    7.186(R)|clk_bufd          |   0.000|
+led<5>             |    7.130(R)|clk_bufd          |   0.000|
+led<6>             |    7.192(R)|clk_bufd          |   0.000|
+led<7>             |    7.136(R)|clk_bufd          |   0.000|
+-------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.831|    5.815|    5.820|    3.804|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Jun 08 15:09:55 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 196 MB
+
+
+

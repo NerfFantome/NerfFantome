@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "P:/NerfFantome/MasterTest_isim_beh.exe" -prj "P:/NerfFantome/MasterTest_beh.prj" "work.MasterTest" 
