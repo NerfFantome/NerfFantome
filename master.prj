@@ -1,6 +1,0 @@
-vhdl work "sdram_support.vhd"
-vhdl work "sdram_writer.vhd"
-vhdl work "sdram_reader.vhd"
-vhdl work "sdram_init.vhd"
-vhdl work "sdram.vhd"
-vhdl work "Master.vhd"
